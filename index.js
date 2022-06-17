@@ -11,7 +11,7 @@ function deepEqual(item1, item2) {
         return false   
       }
 
-      //but if they're the same length, then we look more closely into the keys with a for loop               
+      //but if they're the same length, then we look more closely into each pair of keys with a for loop               
       else {
         for (let i=0; i<keys1.length; i++) {
 
