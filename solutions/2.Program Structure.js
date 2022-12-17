@@ -26,21 +26,21 @@ for (let i=1; i<=100; i++) {
       console.log(i)
     }
   }
-  
-//cleares
-  for (let j=1; j<=100; j++) {
+
+  //clearest
+  for (j=1; j<=100; j++) {
     if (j%3===0 && j%5===0) {
       console.log("fizzbuzz");
-    }
+    } 
     if (j%3===0) {
       console.log("fizz");
     }
     if (j%5===0) {
       console.log("buzz");
     }
-    if (!j%3===0 && !j%5===0) {
+    if (j%3!==0 && j%5!==0) {
       console.log(j);
-    }
+    } 
   }
 
 //without && operator
