@@ -6,15 +6,15 @@ function min(a,b) {
     } else {
       return b
     }
-  }
-  console.log(min(0, 10));
-  // → 0
-  console.log(min(0, -10));
-  // → -10
+}
 
-  //3.2 recursion
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+//3.2 recursion
 
-  function isEven(num) {
+function isEven(num) {
 	if (num == 0) {
       return true;
     } else if (num == 1) {
