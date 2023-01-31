@@ -64,3 +64,35 @@ function range(start, end, step) {
     return total
   }
   */
+
+//4.2 reversing an array
+
+//new Solution
+function reverseArray(array) {
+  let newArray = [];
+  for (let i=0; i<array.length; i++) {
+  	newArray.unshift(array[i]);
+  }
+  return newArray;
+}
+
+/* old solution 
+function reverseArray(arr) {
+  let newArr = [];
+  for (let i=0; i<arr.length; i++) {
+    newArr.unshift(arr[i]);
+  }
+  return newArr
+}
+
+function reverseArrayInPlace(array) {
+  let arrayHalfLength = Math.floor(array.length/2)-1
+  for (let i=0; i<=arrayHalfLength; i++) {
+   let lastValue = array[array.length-1-i];
+   let firstValue = array[i];
+   array[i] = lastValue
+   array[array.length-1-i] = firstValue
+  }
+  return arrayValue
+}
+*/
