@@ -78,7 +78,7 @@ function reverseArray(array) {
 
 function reverseArrayInPlace(array) {
   for (let i=0; i<Math.floor(array.length/2) ; i++) {
-	let firstHalf = array[i];
+	  let firstHalf = array[i];
     let lastHalf = array[array.length-1-i];
     array[i] = lastHalf;
     array[array.length-1-i] = firstHalf;
@@ -104,5 +104,74 @@ function reverseArrayInPlace(array) {
    array[array.length-1-i] = firstValue
   }
   return arrayValue
+}
+*/
+
+//4.3 Lists
+
+//new solution
+function arrayToList(array) {
+  let list = null;
+  for (let i = array.length-1; i>=0; i--) {
+    let newObject = {
+    	value: array[i],
+      	rest: list
+    }
+    list = newObject;
+  }
+  return list
+}
+
+function listToArray(list) {
+  let array = [];
+  while (list) {
+    array.push(list.value);
+  	list=list.rest;
+  }
+  return array;
+}
+
+/*old solution
+
+function arrayToList(arr) {
+  arr.reverse()
+  let list = null
+  for (let item of arr) {
+    let newList = {
+      value: item,
+      rest: list
+    }
+    list = newList
+  }
+  return list
+}
+
+function listToArray(list) {
+  let arr = []
+  for (let node = list; node; node=node.rest) {
+    arr = [...arr, node.value]
+  }
+  return arr
+}
+
+function prepend(element, list) {
+  let newList = {
+    value: element,
+    rest: list
+  }
+  return newList
+}
+
+function nth(list, num) {
+  let index=num
+  let result
+  for (let node=list; node; node=node.rest) {
+    if (index > 0) {
+      index = index-1
+    } else if (index===0) {
+      return result = node.value      
+    }
+  }
+  return result
 }
 */
