@@ -76,6 +76,16 @@ function reverseArray(array) {
   return newArray;
 }
 
+function reverseArrayInPlace(array) {
+  for (let i=0; i<Math.floor(array.length/2) ; i++) {
+	let firstHalf = array[i];
+    let lastHalf = array[array.length-1-i];
+    array[i] = lastHalf;
+    array[array.length-1-i] = firstHalf;
+  }
+  return array;
+}
+
 /* old solution 
 function reverseArray(arr) {
   let newArr = [];
