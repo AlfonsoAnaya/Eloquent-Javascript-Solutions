@@ -140,6 +140,17 @@ function prepend(value, list) {
   return list;
 }
 
+function nth(list, position) {
+  let value
+  for (i=0; i<=position; i++) {
+    if (i==position) {
+      value = list.value;
+    }
+    list = list.rest;
+  }
+  return value;
+}
+
 /*old solution
 
 function arrayToList(arr) {
