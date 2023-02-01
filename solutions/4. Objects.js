@@ -131,6 +131,15 @@ function listToArray(list) {
   return array;
 }
 
+function prepend(value, list) {
+  newList = {
+    value: value,
+    rest: list  
+  }
+  list = newList;
+  return list;
+}
+
 /*old solution
 
 function arrayToList(arr) {
