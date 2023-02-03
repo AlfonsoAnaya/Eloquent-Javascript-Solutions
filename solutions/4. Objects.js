@@ -198,7 +198,36 @@ function nth(list, num) {
 
 //4.4
 //new solution
+function deepEqual (a, b) {
+  if (typeof(a)==typeof(b)) {
+    if (typeof(a)=="object") {
+      
+      let keys1 = Object.keys(a);
+      let keys2 = Object.keys(b);
+      
+      if (keys1.length!=keys2.length) return false
+      
+        for (element of keys1) {
+          if (!keys2.includes(element) || 
+              !deepEqual(a[element], b[element])) return false;
+        }
+        return true;
+           
+    } else {
+      return (a==b);
+    }
+  } else {
+  return false}
+}
 
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(2, 1))
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
 
 
 /*
